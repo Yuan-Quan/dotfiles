@@ -10,6 +10,7 @@ To track
 * [x] config for jonaburg/picom
 * [x] config for alarcritty
 * [x] fish shell config&functions
+* [x] plasma-workspace/env
 
 ## Get Started
 
