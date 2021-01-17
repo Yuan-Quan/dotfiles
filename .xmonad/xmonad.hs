@@ -121,7 +121,7 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
 -- startup hooks
 myStartupHook = do
      spawnOnce "/usr/bin/picom"
-     spawnOnce "/usr/bin/yakuake"
+--     spawnOnce "/usr/bin/yakuake"
 
 -- layout hooks
 myLayoutHook = spacingRaw True (Border 0 6 6 6) True (Border 6 6 6 6) True $
