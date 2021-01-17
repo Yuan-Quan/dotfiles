@@ -9,6 +9,7 @@ To track
 * [x] .vimrc
 * [x] config for jonaburg/picom
 * [x] config for alarcritty
+* [x] fish shell config&functions
 
 ## Get Started
 
