@@ -106,6 +106,7 @@ coreManageHook = composeAll . concat $
      , "Klipper"
      , "Keepassx"
      , "google-chrome"
+     , "yakuake"
      ]
     mailIrcApps   = [
        "Thunderbird" , "konversation" ] -- yakuake style hook
