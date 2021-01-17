@@ -19,3 +19,10 @@ make life easier:
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 ```
 This line is already in .config/fish/fish.config.
+
+auto start yakuake on login
+```
+ln -s /usr/share/applications/org.kde.yakuake.desktop ~/.kde/Autostart/
+```
+alternatively, use kde system settings
+
