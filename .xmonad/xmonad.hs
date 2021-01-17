@@ -118,16 +118,12 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     t = 1 - h   -- distance from top edge, 90%
     l = 1 - w   -- distance from left edge, 0%
 
---
 -- startup hooks
---
+myStartupHook = do
+     spawnOnce "/usr/bin/picom"
+     spawnOnce "/usr/bin/yakuake"
 
-myStartupHook = spawnOnce "/usr/bin/picom"
-
---
 -- layout hooks
---
-
 myLayoutHook = spacingRaw True (Border 0 6 6 6) True (Border 6 6 6 6) True $
              avoidStruts $ coreLayoutHook
 
