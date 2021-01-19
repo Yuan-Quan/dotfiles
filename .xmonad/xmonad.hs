@@ -88,18 +88,27 @@ myManageHook = manageDocks <+> manageScratchPad <+> coreManageHook
 coreManageHook :: ManageHook
 coreManageHook = composeAll . concat $
   [ [ className   =? c --> doFloat           | c <- myFloats]
+  , [ className   =? c --> doFloat           | c <- kdeApps]
+  , [ className   =? c --> doF (W.shift "2") | c <- webApps]
   , [ className   =? c --> doF (W.shift "9") | c <- mailIrcApps]
   ]
   where
     myFloats      = [
        "MPlayer"
      , "Gimp"
-     , "Plasma-desktop"
-     , "plasmashell"
      , "Klipper"
      , "Keepassx"
-     , "google-chrome"
-     , "yakuake"
+     ]
+    kdeApps       = [
+       "yakuake"
+     , "Plasma-desktop"
+     , "plasmashell"
+     ]
+    webApps       = [
+        "firefox"
+      , "Firefox"
+      , "google-chrome"
+      , "google-chrome-stable"
      ]
     mailIrcApps   = [
        "Thunderbird" , "konversation" ] -- yakuake style hook
