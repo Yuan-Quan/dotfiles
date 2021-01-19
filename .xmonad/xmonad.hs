@@ -2,19 +2,25 @@
 -- ~/.xmonad/xmonad.hs
 --
 
+--------------IMPORTS----------------
+
+-- Basic
 import System.Posix.Env (getEnv)
 import System.IO
 import System.Directory
 import Data.Maybe (maybe)
 import Graphics.X11.ExtraTypes.XF86
 
+-- XMonad
 import XMonad
 
+-- Config
 import XMonad.Config.Desktop
 import XMonad.Config.Gnome
 import XMonad.Config.Kde
 import XMonad.Config.Xfce
 
+-- Layout
 import XMonad.Layout.NoBorders
 import XMonad.Layout.IM
 import XMonad.Layout.SimpleFloat
@@ -27,35 +33,37 @@ import XMonad.Layout.MultiToggle.Instances (StdTransformers(NBFULL, MIRROR, NOBO
 import qualified XMonad.Layout.ToggleLayouts as T (toggleLayouts, ToggleLayout(Toggle))
 import qualified XMonad.Layout.MultiToggle as MT (Toggle(..))
 
-
+-- Action
 import XMonad.Actions.PhysicalScreens
 import XMonad.Actions.CycleWS
 import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
 
+-- Hook
 import XMonad.Hooks.ManageDocks
 import XMonad.Hooks.DynamicLog
 import XMonad.Hooks.SetWMName
 import XMonad.Hooks.ManageDocks
 
+-- Util
 import XMonad.Util.EZConfig
 import XMonad.Util.Scratchpad
 import XMonad.Util.Run (spawnPipe)
 import XMonad.Util.WorkspaceCompare
 import XMonad.Util.SpawnOnce
-
 import XMonad.Util.EZConfig (additionalKeysP)
 
+-- Stack
 import qualified XMonad.StackSet as W
 
---
--- basic configuration
---
+--------------------------------------------------------------
 
-myModMask     = mod4Mask -- use the Windows key as mod
-myBorderWidth = 2        -- set window border size
-myNormalBorderColor  = "#dddddd"
-myFocusedBorderColor = "#FF69B4"
-myTerminal    = "/usr/bin/alacritty" -- preferred terminal emulator
+-- basic configuration
+
+myModMask            = mod4Mask -- use the Windows key as mod
+myBorderWidth        = 2        -- set window border size
+myNormalBorderColor  = "#dddddd"  -- border color of normal windows
+myFocusedBorderColor = "#FF69B4" -- border color of focused window
+myTerminal           = "/usr/bin/alacritty" -- preferred terminal emulator
 
 -- key bindings
 
@@ -64,14 +72,14 @@ myKeys =
   --xmonad
   [ ("M-C-r", spawn "xmonad --recompile") -- Recompiles xmonad]
   -- Layouts
-  -- , ("M-<Space>", sendMessage (MT.Toggle NBFULL) >> sendMessage ToggleStruts) -- Toggles noborder/full
   , ("M-S-<Space>", sendMessage ToggleStruts)     -- Toggles struts
   , ("M-S-n", sendMessage $ MT.Toggle NOBORDERS)  -- Toggles noborder
   ] 
 
 -- key bindings used only in stand alone mode (without KDE)
 myStandAloneKeys :: [([Char], X ())]
-myStandAloneKeys = [ ]
+myStandAloneKeys =
+  [ ]
 
 -- hooks for newly created windows
 myManageHook :: ManageHook
@@ -104,11 +112,12 @@ manageScratchPad = scratchpadManageHook (W.RationalRect l t w h)
     l = 1 - w   -- distance from left edge, 0%
 
 -- startup hooks
+
 myStartupHook = do
-     spawnOnce "/usr/bin/picom"
---     spawnOnce "/usr/bin/yakuake"
+     spawnOnce "/usr/bin/picom &"
 
 -- layout hooks
+
 myLayoutHook = (spacingRaw True (Border 0 6 6 6) True (Border 6 6 6 6) True) $
              avoidStruts $ coreLayoutHook
 
@@ -132,23 +141,19 @@ myLogHook xmproc = dynamicLogWithPP xmobarPP
 
 -- desktop :: DESKTOP_SESSION -> desktop_configuration
 
-desktop "gnome"         = gnomeConfig
-desktop "xmonad-gnome"  = gnomeConfig
 desktop "kde"           = kde4Config
 desktop "kde-plasma"    = kde4Config
 desktop "plasma"        = kde4Config
-desktop "xfce"          = xfceConfig
 desktop _               = desktopConfig
 
---
--- main function (no configuration stored there)
---
+----------------------- MAIN --------------------------------
 
 main :: IO ()
 main = do
   session <- getEnv "DESKTOP_SESSION"
   let defDesktopConfig = maybe desktopConfig desktop session
       myDesktopConfig = defDesktopConfig
+        -- override
         { modMask     = myModMask
         , terminal = myTerminal
         , borderWidth = myBorderWidth
@@ -157,7 +162,7 @@ main = do
         , startupHook = myStartupHook
         , layoutHook  = myLayoutHook
         , manageHook  = myManageHook <+> manageHook defDesktopConfig
-        } `additionalKeysP` myKeys
+        } `additionalKeysP` myKeys --add my keybindings
   -- when running standalone (no KDE), try to spawn xmobar (if installed)
   xmobarInstalled <- doesFileExist "/usr/bin/xmobar"
   if session == Just "xmonad" && xmobarInstalled
