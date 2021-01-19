@@ -64,7 +64,7 @@ myKeys =
   --xmonad
   [ ("M-C-r", spawn "xmonad --recompile") -- Recompiles xmonad]
   -- Layouts
-  , ("M-<Space>", sendMessage (MT.Toggle NBFULL) >> sendMessage ToggleStruts) -- Toggles noborder/full
+  -- , ("M-<Space>", sendMessage (MT.Toggle NBFULL) >> sendMessage ToggleStruts) -- Toggles noborder/full
   , ("M-S-<Space>", sendMessage ToggleStruts)     -- Toggles struts
   , ("M-S-n", sendMessage $ MT.Toggle NOBORDERS)  -- Toggles noborder
   ] 
@@ -123,9 +123,7 @@ coreLayoutHook = tiled ||| Mirror tiled ||| Full ||| Grid
     -- Percent of screen to increment by when resizing panes
     delta   = 3/100
 
---
 -- log hook (for xmobar)
---
 
 myLogHook xmproc = dynamicLogWithPP xmobarPP
   { ppOutput = hPutStrLn xmproc
