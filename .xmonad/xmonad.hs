@@ -108,7 +108,8 @@ coreManageHook = composeAll . concat $
         "firefox"
       , "Firefox"
       , "google-chrome"
-      , "google-chrome-stable"
+      , "Google-chrome"
+      , "Tor Browser"
      ]
     mailIrcApps   = [
        "Thunderbird" , "konversation" ] -- yakuake style hook
