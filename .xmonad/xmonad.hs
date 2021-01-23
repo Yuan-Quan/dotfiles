@@ -90,6 +90,7 @@ coreManageHook = composeAll . concat $
   [ [ className   =? c --> doFloat           | c <- myFloats]
   , [ className   =? c --> doFloat           | c <- kdeApps]
   , [ className   =? c --> doF (W.shift "2") | c <- webApps]
+  , [ className   =? c --> doF (W.shift "8") | c <- torBrowser]
   , [ className   =? c --> doF (W.shift "9") | c <- mailIrcApps]
   ]
   where
@@ -109,7 +110,9 @@ coreManageHook = composeAll . concat $
       , "Firefox"
       , "google-chrome"
       , "Google-chrome"
-      , "Tor Browser"
+     ]
+    torBrowser    = [
+        "Tor Browser"
      ]
     mailIrcApps   = [
        "Thunderbird" , "konversation" ] -- yakuake style hook
