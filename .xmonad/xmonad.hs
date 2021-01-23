@@ -92,6 +92,7 @@ coreManageHook = composeAll . concat $
   , [ className   =? c --> doF (W.shift "2") | c <- webApps]
   , [ className   =? c --> doF (W.shift "8") | c <- torBrowser]
   , [ className   =? c --> doF (W.shift "9") | c <- mailIrcApps]
+  , [ className   =? c --> doF (W.shift "4") | c <- steamApps]
   ]
   where
     myFloats      = [
@@ -113,6 +114,9 @@ coreManageHook = composeAll . concat $
      ]
     torBrowser    = [
         "Tor Browser"
+     ]
+    steamApps     = [
+        "Steam"
      ]
     mailIrcApps   = [
        "Thunderbird" , "konversation" ] -- yakuake style hook
