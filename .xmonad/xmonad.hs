@@ -36,6 +36,7 @@ import qualified XMonad.Layout.MultiToggle as MT (Toggle(..))
 -- Action
 import XMonad.Actions.PhysicalScreens
 import XMonad.Actions.CycleWS
+import XMonad.Actions.NoBorders
 import qualified XMonad.Actions.DynamicWorkspaceOrder as DO
 
 -- Hook
@@ -73,7 +74,10 @@ myKeys =
   [ ("M-C-r", spawn "xmonad --recompile") -- Recompiles xmonad]
   -- Layouts
   , ("M-S-<Space>", sendMessage ToggleStruts)     -- Toggles struts
-  , ("M-S-n", sendMessage $ MT.Toggle NOBORDERS)  -- Toggles noborder
+  , ("M-S-n", withFocused toggleBorder)  -- Toggles noborder
+  , ("M-S-f", do
+                sendMessage ToggleStruts
+                withFocused toggleBorder) --Toggle struts and border,FULL SCREEN!!
   ] 
 
 -- key bindings used only in stand alone mode (without KDE)
