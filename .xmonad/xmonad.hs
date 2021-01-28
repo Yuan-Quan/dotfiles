@@ -77,7 +77,8 @@ myKeys =
   , ("M-S-n", withFocused toggleBorder)  -- Toggles noborder
   , ("M-S-f", do
                 sendMessage ToggleStruts
-                withFocused toggleBorder) --Toggle struts and border,FULL SCREEN!!
+                withFocused toggleBorder
+    ) --Toggle struts and border,FULL SCREEN!!
   ] 
 
 -- key bindings used only in stand alone mode (without KDE)
@@ -97,6 +98,7 @@ coreManageHook = composeAll . concat $
   , [ className   =? c --> doF (W.shift "8") | c <- torBrowser]
   , [ className   =? c --> doF (W.shift "9") | c <- mailIrcApps]
   , [ className   =? c --> doF (W.shift "4") | c <- steamApps]
+  , [ className   =? c --> doF (W.shift "3") | c <- musicApps]
   ]
   where
     myFloats      = [
@@ -118,6 +120,10 @@ coreManageHook = composeAll . concat $
      ]
     torBrowser    = [
         "Tor Browser"
+     ]
+    musicApps     = [
+        "spotify"
+      , "netease-cloud-music"
      ]
     steamApps     = [
         "Steam"
