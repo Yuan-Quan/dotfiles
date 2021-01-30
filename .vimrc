@@ -1,5 +1,4 @@
 " the VIM-Pug !!!!!, place your plugins here!!
-" I love vim, because...   可以 插 进 各种奇怪的东西
 call plug#begin('~/.vim/plugged')
  " this makes the vim looks awsome
  Plug 'https://github.com/vim-airline/vim-airline.git'
@@ -16,7 +15,7 @@ call plug#begin('~/.vim/plugged')
  Plug 'https://github.com/Raimondi/delimitMate.git'
 call plug#end()
 
-" to test the .vimrc work? and some init command
+" Configs
  set number
  " pre command
    " to enable the airline view 
