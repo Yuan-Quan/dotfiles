@@ -20,9 +20,7 @@ alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 ```
 This line is already in .config/fish/fish.config.
 
-auto start yakuake on login
+Prevent untracked files from showing up when we call dotfiles status.
 ```
-ln -s /usr/share/applications/org.kde.yakuake.desktop ~/.kde/Autostart/
+config config --local status.showUntrackedFiles no
 ```
-alternatively, use kde system settings
-
