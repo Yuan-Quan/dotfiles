@@ -13,11 +13,16 @@ call plug#begin('~/.vim/plugged')
  Plug 'https://github.com/Yggdroot/indentLine.git'
  " auto-completion for quotes, parens, brackets, etc
  Plug 'https://github.com/Raimondi/delimitMate.git'
+ " rainbow parenthese
+ Plug 'frazrepo/vim-rainbow'
 call plug#end()
 
 " Configs
+ " Apend path
+ set path+=** 
+ " Enable line number
  set number
- " pre command
+ " Plugin setup
    " to enable the airline view 
    let g:airline#extensions#tabline#enabled = 1
    let g:airline_powerline_fonts = 1
@@ -29,6 +34,18 @@ call plug#end()
    let NERDTreeShowHidden=1
    " enable the indnet line
    let g:indentLine_enabled = 1
+   " Rainbow
+   let g:rainbow_active = 1
+
+   let g:rainbow_load_separately = [
+	       \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+       \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+       \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+       \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+       \ ]
+
+   let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+   let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
 " :r $VIMRUNTIME/.vimrc_example
 " When started as "evim", evim.vim will already have done these settings.
