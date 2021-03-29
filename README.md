@@ -26,3 +26,9 @@ alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 config config --local status.showUntrackedFiles no
 config pull
 ```
+
+after clash is up and running:
+```bash
+cd ~
+sudo ln setProxy.sh /etc/profile.d/setProxy.sh
+```
