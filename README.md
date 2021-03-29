@@ -7,20 +7,22 @@ This repo is used to manage my dotfiles
 To track
 * [x] xmonad config
 * [x] .vimrc
+* [ ] .bashrc
 * [x] config for jonaburg/picom
 * [x] config for alarcritty
 * [x] fish shell config&functions
-* [x] plasma-workspace/env
+* [ ] some game saves
 
 ## Get Started
 
-make life easier:
-```
+after git was setup properly, pull dotfiles:
+```bash
+cd ~
+git clone https://github.com/Yuan-Quan/dotfiles.git
+mv dotfiles.git .dotfiles.git
+# This line is already in .config/fish/fish.config, but you do need to run it onece.
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
-```
-This line is already in .config/fish/fish.config.
-
-Prevent untracked files from showing up when we call dotfiles status.
-```
+# Prevent untracked files from showing up when we call dotfiles status.
 config config --local status.showUntrackedFiles no
+config pull
 ```
