@@ -7,7 +7,7 @@ This repo is used to manage my dotfiles
 To track
 * [x] xmonad config
 * [x] .vimrc
-* [ ] .bashrc
+* [x] .bashrc
 * [x] config for jonaburg/picom
 * [x] config for alarcritty
 * [x] fish shell config&functions
