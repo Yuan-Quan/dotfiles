@@ -24,7 +24,9 @@ mv dotfiles.git .dotfiles.git
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 # Prevent untracked files from showing up when we call dotfiles status.
 config config --local status.showUntrackedFiles no
+#apply config files
 config pull
+config reset --hard HEAD
 ```
 
 after clash is up and running:
