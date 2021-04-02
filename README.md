@@ -30,5 +30,5 @@ config pull
 after clash is up and running:
 ```bash
 cd ~
-sudo ln setProxy.sh /etc/profile.d/setProxy.sh
+sudo ln -s setProxy.sh /etc/profile.d/setProxy.sh
 ```
