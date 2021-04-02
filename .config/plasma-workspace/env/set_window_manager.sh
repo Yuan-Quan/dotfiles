@@ -1,1 +1,2 @@
-export KDEWM=/usr/bin/xmonad
+# I use kwin tilling script now so...
+# export KDEWM=/usr/bin/xmonad
