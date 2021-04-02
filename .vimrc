@@ -9,7 +9,7 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
-" the VIM-Pug !!!!!, place your plugins here!!
+" the VIM-Plug!!!!!, place your plugins here!!
 call plug#begin('~/.vim/plugged')
  " regist vim-plug as plugin
  Plug 'junegunn/vim-plug'
