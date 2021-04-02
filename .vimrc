@@ -35,7 +35,7 @@ call plug#end()
  set path+=** 
  " Enable line number
  set number
- " Plugin setup
+ " Plugin configs
    " to enable the airline view 
    let g:airline#extensions#tabline#enabled = 1
    let g:airline_powerline_fonts = 1
