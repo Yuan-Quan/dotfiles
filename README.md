@@ -1,6 +1,6 @@
 # My dotfiles
 
-This repo is used to manage my dotfiles
+Repo to manage my dotfiles
 
 ## TODO
 
