@@ -11,6 +11,8 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " the VIM-Pug !!!!!, place your plugins here!!
 call plug#begin('~/.vim/plugged')
+ " regist vim-plug as plugin
+ Plug 'junegunn/vim-plug'
  " this makes the vim looks awsome
  Plug 'https://github.com/vim-airline/vim-airline.git'
  Plug 'vim-airline/vim-airline-themes'
