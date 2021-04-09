@@ -11,7 +11,6 @@ To track
 * [x] config for jonaburg/picom
 * [x] config for alarcritty
 * [x] fish shell config&functions
-* [ ] ls->exa, cat->bat...
 * [ ] some game saves
 
 ## Get Started
