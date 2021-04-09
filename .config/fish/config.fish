@@ -13,3 +13,6 @@ end
 if test -e "/usr/bin/exa"
      alias ls="/usr/bin/exa"
 end
+
+#### Start StarShipPrompt ####
+starship init fish | source

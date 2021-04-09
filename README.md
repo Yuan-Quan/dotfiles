@@ -11,6 +11,7 @@ To track
 * [x] config for jonaburg/picom
 * [x] config for alarcritty
 * [x] fish shell config&functions
+* [x] starship prompt config
 * [ ] some game saves
 
 ## Get Started
