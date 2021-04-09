@@ -11,6 +11,7 @@ To track
 * [x] config for jonaburg/picom
 * [x] config for alarcritty
 * [x] fish shell config&functions
+* [ ] ls->exa, cat->bat...
 * [ ] some game saves
 
 ## Get Started
@@ -32,5 +33,5 @@ config reset --hard HEAD
 after clash is up and running:
 ```bash
 cd ~
-sudo ln -s setProxy.sh /etc/profile.d/setProxy.sh
+sudo cp setProxy.sh /etc/profile.d/setProxy.sh
 ```
