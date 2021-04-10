@@ -8,8 +8,8 @@ To track
 * [x] xmonad config
 * [x] .vimrc
 * [x] .bashrc
-* [x] config for jonaburg/picom
-* [x] config for alarcritty
+* [x] jonaburg/picom config
+* [x] alarcritty config
 * [x] fish shell config&functions
 * [x] starship prompt config
 * [ ] some game saves
