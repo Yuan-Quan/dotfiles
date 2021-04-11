@@ -9,7 +9,7 @@ colorscript random
 
 #### Alias!! ####
 # Set alias of dotfiles git bare repo
-alias config="/usr/bin/git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias config="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
 # If bat availble, cat->bat
 if test -e "/usr/bin/bat"
