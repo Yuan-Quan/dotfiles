@@ -4,7 +4,9 @@ starship init fish | source
 
 #### Greatings!! ####
 # Color script when open it
-colorscript random
+if test -e "/usr/bin/colorscript"
+    colorscript random
+end
 
 
 #### Alias!! ####
