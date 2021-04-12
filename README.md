@@ -26,7 +26,6 @@ alias config="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 # Prevent untracked files from showing up when we call dotfiles status.
 config config --local status.showUntrackedFiles no
 #apply config files
-config pull
 config reset --hard HEAD
 ```
 
