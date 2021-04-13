@@ -10,8 +10,8 @@
 	8			OH L
 	9			OH R
 	
-	10			GT.1			J48
-	11			GT.2			J48
+	10			GT.1			J48		T
+	11			GT.2			J48		T
 	12			Bass			AV2
 
 	13			Prog.1.L		AV2.L
