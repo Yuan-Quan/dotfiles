@@ -1,7 +1,8 @@
-	CH.			Name					48V
+	CH.T			Name					
 
+Stg4000 Input
 	1			KIn
-	2			kOut
+	2			kOut					
 	3			SnTop
 	4			SnBt
 	5			HH
@@ -10,8 +11,8 @@
 	8			OH L
 	9			OH R
 	
-	10			GT.1			J48		T
-	11			GT.2			J48		T
+	10			GT.1			J48		
+	11			GT.2			J48		
 	12			Bass			AV2
 
 	13			Prog.1.L		AV2.L
