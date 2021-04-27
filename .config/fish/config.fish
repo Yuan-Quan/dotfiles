@@ -14,13 +14,13 @@ end
 alias config="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 
 # If bat availble, cat->bat
-if test -e "/usr/bin/bat"
-     alias cat="/usr/bin/bat"
+if type -q bat
+     alias cat=bat
 end
 
 # If exa availble, ls->exa
-if test -e "/usr/bin/exa"
-     alias ls="/usr/bin/exa"
+if type -q exa
+     alias ls=exa
 end
 
 
