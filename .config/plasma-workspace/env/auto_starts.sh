@@ -1,1 +1,2 @@
 krunner -d &
+yakuake -d &
