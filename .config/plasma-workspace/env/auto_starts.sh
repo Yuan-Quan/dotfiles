@@ -1,2 +1,0 @@
-krunner -d &
-yakuake &
