@@ -1,1 +1,1 @@
-/home/luna/.local/share/omf/themes/lambda/fish_prompt.fish
+C:/home/luna/.local/share/omf/themes/lambda/fish_prompt.fish
