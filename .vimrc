@@ -60,6 +60,9 @@ call plug#end()
    let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
    let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
+"Auto close vim if only explore left open 
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 " :r $VIMRUNTIME/.vimrc_example
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -101,5 +104,3 @@ endif " has("autocmd")
 if has('syntax') && has('eval')
   packadd! matchit
 endif
-"Auto close vim if only explore left open 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
