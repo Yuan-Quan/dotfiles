@@ -15,3 +15,5 @@ set FTP_PROXY=$ftp_proxy
 set SOCKS_PROXY=$socks_proxy
 set RSYNC_PROXY=$rsync_proxy
 set NO_PROXY=$no_proxy
+
+Invoke-Expression (&starship init powershell)
