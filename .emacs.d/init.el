@@ -55,7 +55,8 @@
 )
 
 (use-package ivy
-  :diminish
+  :ensure t
+  :diminish ivy-mode
   :bind (
          :map ivy-minibuffer-map
          ("TAB" . ivy-alt-done)	
@@ -67,8 +68,9 @@
          ("C-d" . ivy-reverse-i-search-kill)
    )
   :config
-  (ivy-mode 1)
-)
+    (ivy-mode 1)
+  :hook (after-init . ivy-mode)
+  )
 
 (use-package doom-modeline
   :ensure t
