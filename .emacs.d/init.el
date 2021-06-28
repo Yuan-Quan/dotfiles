@@ -7,6 +7,7 @@
 (menu-bar-mode -1)                         ; Disable menubar
 (set-fringe-mode 10)                       ; Give it some breathing room
 
+(load-theme 'wombat)
 (set-face-attribute 'default nil :font "FiraMono Nerd Font Mono" :height 128)       ; Set font and font size
 
 ;; Initialize package sources
@@ -44,7 +45,8 @@
   :bind(
 	("C-s" . swiper)
    )
-  :ensure t)
+  :ensure t
+)
 
 (use-package ivy
   :diminish
@@ -56,14 +58,17 @@
          ("C-l" . ivy-done)
          ("C-d" . ivy-switch-buffer-kill)
          :map ivy-reverse-i-search-map
-         ("C-d" . ivy-reverse-i-search-kill))
+         ("C-d" . ivy-reverse-i-search-kill)
+   )
   :config
-  (ivy-mode 1))
+  (ivy-mode 1)
+)
 
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1)
-  :custom ((doom-modeline-height 15)))
+  :custom ((doom-modeline-height 15))
+)
 
 
 
