@@ -12,6 +12,7 @@
 (set-fringe-mode 10)                       ; Give it some breathing room
 
 (load-theme 'wombat)
+(when window-system (set-frame-size (selected-frame) 160 36))
 (set-face-attribute 'default nil :font "FiraMono Nerd Font Mono" :height 108)       ; Set font and font size
 
 ;; Initialize package sources
