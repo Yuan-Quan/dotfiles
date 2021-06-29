@@ -55,7 +55,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(package-selected-packages '(doom-modeline swiper ivy command-log-mode use-package)))
+ '(package-selected-packages
+   '(rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -85,14 +86,13 @@
    )
   :config
     (ivy-mode 1)
-  :hook (after-init . ivy-mode)
-  )
+  :hook (after-init . ivy-mode))
 
 (use-package doom-modeline
   :ensure t
   :init (doom-modeline-mode 1)
-  :custom ((doom-modeline-height 15))
-)
+  :custom ((doom-modeline-height 15)))
 
-
+(use-package rainbow-delimiters
+  :hook (prog-mode . rainbow-delimiters-mode))
 
