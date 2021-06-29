@@ -35,16 +35,17 @@
     {
         "defaults": 
         {
-            "fontFace": "FiraMono NF",
-            "fontSize": 10,
             "backgroundImage": "C:/Users/Quan/Documents/PowerShell/WindowsTerminalBackground.png",
-            "backgroundImageOpacity": 0.6,
+            "backgroundImageAlignment": "bottomRight",
+            "backgroundImageOpacity": 0.59999999999999998,
             "backgroundImageStretchMode": "uniformToFill",
-            "backgroundImageAlignment": "bottomRight"
+            "fontFace": "FiraMono NF",
+            "fontSize": 10
         },
         "list": 
         [
             {
+                "colorScheme": "One Half Dark",
                 "guid": "{574e775e-4f2a-5b96-ac1e-a2962a402336}",
                 "hidden": false,
                 "name": "PowerShell",
@@ -61,7 +62,7 @@
                 "commandline": "powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
-                "name": "Windows PowerShell",
+                "name": "Windows PowerShell"
             },
             {
                 "commandline": "cmd.exe",
