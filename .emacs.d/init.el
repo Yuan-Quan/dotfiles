@@ -50,7 +50,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
+   '(helpful counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
  '(which-key-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -110,3 +110,16 @@
 (use-package ivy-rich
   :init
   (ivy-rich-mode 1))
+
+(use-package helpful
+  :ensure t
+  :custom
+  (counsel-describe-function-function #'helpful-callable)
+  (counsel-describe-variable-function #'helpful-variable)
+  :bind
+  ([remap describe-function] . helpful-function)
+  ([remap describe-symbol] . helpful-symbol)
+  ([remap describe-variable] . helpful-variable)
+  ([remap describe-command] . helpful-command)
+  ([remap describe-key] . helpful-key))
+
