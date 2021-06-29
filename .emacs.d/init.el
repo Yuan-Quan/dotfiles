@@ -10,9 +10,25 @@
 (load-theme 'wombat)
 (set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height 100):       ; Set font and font size
 
+;; Enable line numbers 
+(global-display-line-numbers-mode t)
+(column-number-mode)
+
+;; Enable line numbers for some modes
+(dolist (mode '(text-mode-hook
+                prog-mode-hook
+                conf-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 1))))
+
+;; Override some modes which derive from the above
+(dolist (mode '(org-mode-hook
+		eshell-mode-hook
+		term-mode-hook
+		shell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
+
 ;; Initialize package sources
 (require 'package)
-
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
                          ("org" . "https://orgmode.org/elpa/")
                          ("elpa" . "https://elpa.gnu.org/packages/")))
