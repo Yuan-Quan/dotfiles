@@ -12,7 +12,9 @@
 (menu-bar-mode -1)                         ; Disable menubar
 (set-fringe-mode 10)                       ; Give it some breathing room
 
-(load-theme 'wombat)
+(if (require 'doom-themes nil 'noerror)
+  (load-theme 'doom-city-lights t)
+  (load-theme 'wombat))
 (when window-system (set-frame-size (selected-frame) 160 36))
 (set-face-attribute 'default nil :font "FiraMono Nerd Font Mono" :height 98)       ; Set font and font size
 
@@ -57,7 +59,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(helpful counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
+   '(doom-themes helpful counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
  '(which-key-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -104,6 +106,8 @@
   :ensure t
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
+
+(use-package doom-themes)
 
 (use-package rainbow-delimiters
   :hook (prog-mode . rainbow-delimiters-mode))
