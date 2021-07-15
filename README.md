@@ -11,7 +11,7 @@ none
 after git, pwsh ececution policy was setup properly, pull dotfiles:
 ```bash
 cd ~
-git clone --bare https://github.com/Yuan-Quan/dotfiles.git
+git clone --bare https://github.com/Yuan-Quan/dotfiles.git --branch windows
 Rename-Item dotfiles.git .dotfiles.git
 Install-Module -Name HackF5.ProfileAlias
 Set-ProfileAlias -Name config -Command "git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME #{*}" -Bash
