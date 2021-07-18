@@ -39,8 +39,11 @@
             "backgroundImageAlignment": "bottomRight",
             "backgroundImageOpacity": 0.59999999999999998,
             "backgroundImageStretchMode": "uniformToFill",
-            "fontFace": "FiraMono NF",
-            "fontSize": 10
+            "font": 
+            {
+                "face": "FiraMono NF",
+                "size": 10
+            }
         },
         "list": 
         [
