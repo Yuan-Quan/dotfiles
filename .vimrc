@@ -5,54 +5,54 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
 
 " the VIM-Plug!!!!!, place your plugins here!!
 call plug#begin('~/.vim/plugged')
- " regist vim-plug as plugin
- Plug 'junegunn/vim-plug'
- " this makes the vim looks awsome
- Plug 'https://github.com/vim-airline/vim-airline.git'
- Plug 'vim-airline/vim-airline-themes'
- " file explor
- Plug 'scrooloose/nerdtree'
- Plug 'Xuyuanp/nerdtree-git-plugin'
- Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight.git'
- " 🌸 A command-line fuzzy finder for VIM
- Plug 'https://github.com/junegunn/fzf.vim.git'
- " the indention levels with thin vertical lines
- Plug 'https://github.com/Yggdroot/indentLine.git'
- " auto-completion for quotes, parens, brackets, etc
- Plug 'https://github.com/Raimondi/delimitMate.git'
- " rainbow parenthese
- Plug 'frazrepo/vim-rainbow'
+  " regist vim-plug as plugin
+  Plug 'junegunn/vim-plug'
+  " this makes the vim looks awsome
+  Plug 'https://github.com/vim-airline/vim-airline.git'
+  Plug 'vim-airline/vim-airline-themes'
+  " file explor
+  Plug 'scrooloose/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'https://github.com/tiagofumo/vim-nerdtree-syntax-highlight.git'
+  " 🌸 A command-line fuzzy finder for VIM
+  Plug 'https://github.com/junegunn/fzf.vim.git'
+  " the indention levels with thin vertical lines
+  Plug 'https://github.com/Yggdroot/indentLine.git'
+  " auto-completion for quotes, parens, brackets, etc
+  Plug 'https://github.com/Raimondi/delimitMate.git'
+  " rainbow parenthese
+  Plug 'frazrepo/vim-rainbow'
 call plug#end()
 
 " Configs
- " Apend path
- set path+=** 
- " Enable line number
- set number
- " Plugin configs
-   " to enable the airline view 
-   let g:airline#extensions#tabline#enabled = 1
-   let g:airline_powerline_fonts = 1
-   " set the theme
-   let g:airline_theme='fruit_punch'
-   " auto open nerd tree
+" Apend path
+set path+=** 
+" Enable line number
+set number
+" Plugin configs
+  " to enable the airline view 
+  let g:airline#extensions#tabline#enabled = 1
+  let g:airline_powerline_fonts = 1
+  " set the theme
+  let g:airline_theme='fruit_punch'
+  " auto open nerd tree
    " autocmd vimenter * NERDTree
-   " show hidden .files
-   let NERDTreeShowHidden=1
-   " enable the indnet line
-   let g:indentLine_enabled = 1
-   " Rainbow
-   let g:rainbow_active = 1
+  " show hidden .files
+  let NERDTreeShowHidden=1
+  " enable the indnet line
+  let g:indentLine_enabled = 1
+  " Rainbow
+  let g:rainbow_active = 1
 
-   let g:rainbow_load_separately = [
-	       \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-       \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
-       \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
-       \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
-       \ ]
+  let g:rainbow_load_separately = [
+	    \ [ '*' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+      \ [ '*.tex' , [['(', ')'], ['\[', '\]']] ],
+      \ [ '*.cpp' , [['(', ')'], ['\[', '\]'], ['{', '}']] ],
+      \ [ '*.{html,htm}' , [['(', ')'], ['\[', '\]'], ['{', '}'], ['<\a[^>]*>', '</[^>]*>']] ],
+      \ ]
 
-   let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
-   let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
+  let g:rainbow_guifgs = ['RoyalBlue3', 'DarkOrange3', 'DarkOrchid3', 'FireBrick']
+  let g:rainbow_ctermfgs = ['lightblue', 'lightgreen', 'yellow', 'red', 'magenta']
 
 "Auto close vim if only NERDTREE left open 
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
