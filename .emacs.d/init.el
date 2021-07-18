@@ -101,6 +101,8 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
 
+(use-package all-the-icons)
+
 (use-package doom-themes)
 
 (use-package rainbow-delimiters
