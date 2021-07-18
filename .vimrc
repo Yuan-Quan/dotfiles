@@ -30,7 +30,7 @@ call plug#begin('~/.vim/plugged')
   Plug 'frazrepo/vim-rainbow'
 call plug#end()
 
-" Configs
+""" Configs
 " Apend path
 set path+=** 
 " Enable line number
