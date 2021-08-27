@@ -144,7 +144,8 @@
 
 (use-package org
   :config
-  (setq org-ellipsis " ▾"))
+  (setq org-ellipsis " ▾"
+	org-hide-emphasis-markers t))
 
 (use-package org-bullets
   :after org
