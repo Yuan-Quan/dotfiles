@@ -142,7 +142,12 @@
 (use-package magit
   :ensure t)
 
+(defun cfg/org-mode-setup ()
+  (org-indent-mode)
+  (visual-line-mode 1))
+
 (use-package org
+  :hook (org-mode . cfg/org-mode-setup)
   :config
   (setq org-ellipsis " ▾"
 	org-hide-emphasis-markers t))
@@ -154,6 +159,7 @@
   (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
 
 ;; Set faces for heading levels
+(with-eval-after-load 'org-faces
   (dolist (face '((org-level-1 . 1.2)
                   (org-level-2 . 1.1)
                   (org-level-3 . 1.05)
@@ -162,10 +168,10 @@
                   (org-level-6 . 1.1)
                   (org-level-7 . 1.1)
                   (org-level-8 . 1.1)))
-    (set-face-attribute (car face) nil :font "Segoe UI" :weight 'bold :height (cdr face)))
+    (set-face-attribute (car face) nil :font "Segoe UI" :weight 'bold :height (cdr face))))
 
 (defun cfg/org-mode-visual-fill ()
-  (setq visual-fill-column-width 100
+  (setq visual-fill-column-width 128
         visual-fill-column-center-text t)
   (visual-fill-column-mode 1))
 
