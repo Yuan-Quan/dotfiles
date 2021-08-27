@@ -18,6 +18,9 @@
 (when window-system (set-frame-size (selected-frame) 160 36))
 (set-face-attribute 'default nil :font "FiraMono NF" :height 98)       ; Set font and font size
 
+;; Enable some functions
+(put 'downcase-region 'disabled nil)
+
 ;; Enable line numbers 
 (global-display-line-numbers-mode t)
 (column-number-mode)
@@ -140,4 +143,3 @@
   :ensure t)
 
 (use-package org)
-(put 'downcase-region 'disabled nil)
