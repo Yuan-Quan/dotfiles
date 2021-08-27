@@ -62,7 +62,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(visual-fill-column org-bullets magit doom-themes helpful counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
+   '(unicode-fonts visual-fill-column org-bullets magit doom-themes helpful counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
  '(which-key-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -70,6 +70,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
+
+(use-package unicode-fonts)
 
 (use-package swiper
   :bind(
@@ -149,7 +151,7 @@
 (use-package org
   :hook (org-mode . cfg/org-mode-setup)
   :config
-  (setq org-ellipsis " ▾"
+  (setq org-ellipsis " ▼"
 	org-hide-emphasis-markers t))
 
 (use-package org-bullets
