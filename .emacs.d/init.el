@@ -62,7 +62,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(magit doom-themes helpful counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
+   '(org-bullets magit doom-themes helpful counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
  '(which-key-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -142,4 +142,23 @@
 (use-package magit
   :ensure t)
 
-(use-package org)
+(use-package org
+  :config
+  (setq org-ellipsis " ▾"))
+
+(use-package org-bullets
+  :after org
+  :hook (org-mode . org-bullets-mode)
+  :custom
+  (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+
+;; Set faces for heading levels
+  (dolist (face '((org-level-1 . 1.2)
+                  (org-level-2 . 1.1)
+                  (org-level-3 . 1.05)
+                  (org-level-4 . 1.0)
+                  (org-level-5 . 1.1)
+                  (org-level-6 . 1.1)
+                  (org-level-7 . 1.1)
+                  (org-level-8 . 1.1)))
+    (set-face-attribute (car face) nil :font "Segoe UI" :weight 'bold :height (cdr face)))
