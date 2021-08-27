@@ -140,3 +140,4 @@
   :ensure t)
 
 (use-package org)
+(put 'downcase-region 'disabled nil)
