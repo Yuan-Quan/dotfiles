@@ -139,3 +139,4 @@
 (use-package magit
   :ensure t)
 
+(use-package org)
