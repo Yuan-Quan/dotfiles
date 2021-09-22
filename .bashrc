@@ -18,3 +18,4 @@ fi
 
 PS1='[\u@\h \W]\$ '
 
+eval "$(starship init bash)"
