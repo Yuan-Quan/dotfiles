@@ -16,6 +16,13 @@ else
 	alias ls='ls --color=auto'
 fi
 
+# replace cat with bat
+if command -v bat &> /dev/null
+then
+	alias cat='bat'
+fi
+
+
 PS1='[\u@\h \W]\$ '
 
 eval "$(starship init bash)"
