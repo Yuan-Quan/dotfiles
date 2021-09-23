@@ -5,7 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# setup ROS
+source /opt/ros/melodic/setup.bash
+
 alias config="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
+alias ..="cd .."
 
 # replace ls with exa
 if command -v exa &> /dev/null
