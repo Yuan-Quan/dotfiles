@@ -6,7 +6,8 @@
 [[ $- != *i* ]] && return
 
 # setup ROS
-source /opt/ros/melodic/setup.bash
+source /opt/ros/noetic/setup.bash
+source /home/cirno/catkin_ws/devel/setup.bash
 
 alias config="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
 alias ..="cd .."
