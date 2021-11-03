@@ -30,3 +30,9 @@ end
 if set -l ind (contains -i -- ./ $fish_user_paths)
     set -e fish_user_paths[$ind]
 end
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /home/cirno/anaconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
