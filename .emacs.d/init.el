@@ -11,7 +11,7 @@
   (load-theme 'doom-city-lights t)
   (load-theme 'wombat))
 (when window-system (set-frame-size (selected-frame) 160 36))
-(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height 100)       ; Set font and font size
+(set-face-attribute 'default nil :font "FiraCode Nerd Font Mono" :height 132)       ; Set font and font size
 
 ;; Enable line numbers 
 (global-display-line-numbers-mode t)
