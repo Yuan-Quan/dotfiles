@@ -63,6 +63,8 @@
  ;; If there is more than one, they won't work right.
  )
 
+(use-package unicode-fonts)
+
 (use-package swiper
   :bind(
 	("C-s" . swiper)
