@@ -145,7 +145,7 @@ font:
     style: Extra Bold Italic
 
   #Point size
-  size: 8.0
+  size: 10.5
 
   # Offset is the extBoldra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -178,7 +178,7 @@ schemes:
   tokyo-night: &tokyo-night
     # Default colors
     primary:
-      background: '0x1a1b26'
+      background: '0x000000'
       foreground: '0xa9b1d6'
 
     # Normal colors
