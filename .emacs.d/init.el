@@ -54,7 +54,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
-   '(visual-fill-column magit doom-themes helpful counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
+   '(org-tree-slide visual-fill-column magit doom-themes helpful counsel ivy-rich which-key rainbow-delimiters doom-modeline swiper ivy command-log-mode use-package))
  '(which-key-mode t))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -171,3 +171,7 @@
 
 (use-package visual-fill-column
        :hook (org-mode . cfg/org-mode-visual-fill))
+
+(use-package org-tree-slide
+  :custom
+  (org-image-actual-width nil))
