@@ -1,7 +1,6 @@
 ### Prompt!! ####
 starship init fish | source
 
-
 #### Greatings!! ####
 # Color script when open it
 if test -e "/usr/bin/colorscript"
@@ -22,6 +21,21 @@ end
 if type -q exa
      alias ls=exa
 end
+
+alias l 'exa -lh --group-directories-first --time-style=long-iso --icons'
+alias ll 'exa -alh --group-directories-first --time-style=long-iso --icons'
+alias l. 'exa -ad .* -lh --group-directories-first --time-style=long-iso --icons'
+alias lll 'exa -alh --group-directories-first --time-style=long-iso --icons --color always | less --raw-control-chars'
+
+function tree -d "Pipe exa --tree output to less"
+    command exa --color always --time-style=long-iso --group-directories-first  --icons -I '.git|.cache|pycache' --tree $argv
+end
+
+function treel -d "Pipe exa --tree output to less"
+    command exa --color always --time-style=long-iso --group-directories-first  --icons -I '.git|.cache|pycache' --tree $argv | less --raw-control-chars
+end
+
+abbr tl 'treel'
 
 
 #### Others!! ####
