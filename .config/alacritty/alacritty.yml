@@ -145,7 +145,7 @@ font:
     style: Extra Bold Italic
 
   #Point size
-  size: 10.5
+  size: 10 
 
   # Offset is the extBoldra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -400,7 +400,7 @@ colors: *tokyo-night
 #background_opacity: 0.9
 
 window:
-  opacity: 0.9
+  opacity: 0.85
 
 #selection:
   # This string contains all characters that are used as separators for
