@@ -19,7 +19,7 @@ To track
 after git was setup properly, pull dotfiles:
 ```bash
 cd ~
-git clone --bare https://github.com/Yuan-Quan/dotfiles.git
+git clone --bare https://github.com/Yuan-Quan/dotfiles.git --branch ros_noetic
 mv dotfiles.git .dotfiles.git
 # This line is already in .config/fish/fish.config, but you do need to run it onece.
 alias config="git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME"
