@@ -47,8 +47,3 @@ end
 
 source /opt/ros/noetic/share/rosbash/rosfish
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval /home/cirno/anaconda3/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
-
