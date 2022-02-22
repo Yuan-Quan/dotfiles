@@ -168,7 +168,7 @@ font:
   #use_thin_strokes: true
 
 # If `true`, bold text is drawn using the bright color variants.
-#draw_bold_text_with_bright_colors: false
+draw_bold_text_with_bright_colors: false
 
 
 schemes:
@@ -400,7 +400,7 @@ colors: *tokyo-night
 #background_opacity: 0.9
 
 window:
-  opacity: 0.85
+  opacity: 0.70
 
 #selection:
   # This string contains all characters that are used as separators for
