@@ -50,4 +50,3 @@ end
 eval /home/cirno/anaconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
 
-source /opt/ros/melodic/share/rosbash/rosfish
