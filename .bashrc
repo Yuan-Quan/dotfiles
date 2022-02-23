@@ -16,6 +16,10 @@ export LD_LIBRARY_PATH=/usr/local/cuda-11.6/lib64${LD_LIBRARY_PATH:+:${LD_LIBRAR
 
 export ROS_PYTHON_VERSION=3
 
+# debug car
+#export ROS_HOSTNAME=ucar
+#export ROS_MASTER_URI=http://ucar:11311
+
 source /opt/ros/noetic/setup.bash
 
 source /home/cirno/source/repos/15th_car/devel/setup.bash
