@@ -7,5 +7,6 @@ function catkinSource --on-variable PWD
 	set_color normal
 	echo -n " sourced setup for current workspace"
 	echo ""
+	set -gx ws_dir "$PWD"
     end
 end
