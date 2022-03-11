@@ -400,7 +400,7 @@ colors: *tokyo-night
 #background_opacity: 0.9
 
 window:
-  opacity: 0.70
+  opacity: 0.80
 
 #selection:
   # This string contains all characters that are used as separators for

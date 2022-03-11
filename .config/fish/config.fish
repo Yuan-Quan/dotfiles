@@ -47,3 +47,5 @@ end
 
 source /opt/ros/noetic/share/rosbash/rosfish
 
+alias uviz 'ROS_IP=192.168.50.101 ROS_MASTER_URI=http://192.168.50.10:11311/ rviz -d ~/ucar.rviz'
+
