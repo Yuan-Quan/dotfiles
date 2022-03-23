@@ -28,6 +28,8 @@ call plug#begin('~/.vim/plugged')
   Plug 'https://github.com/Raimondi/delimitMate.git'
   " rainbow parenthese
   Plug 'frazrepo/vim-rainbow'
+  " bufferline
+  Plug 'https://github.com/bling/vim-bufferline.git'
 call plug#end()
 
 """ Configs
@@ -40,7 +42,7 @@ set number
   let g:airline#extensions#tabline#enabled = 1
   let g:airline_powerline_fonts = 1
   " set the theme
-  let g:airline_theme='fruit_punch'
+  let g:airline_theme='bubblegum'
   " auto open nerd tree
    " autocmd vimenter * NERDTree
   " show hidden .files
