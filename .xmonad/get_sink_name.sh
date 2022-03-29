@@ -9,7 +9,6 @@ getdefaultsinkvol() {
             /^\s+volume: / && indefault {print $5; exit}'
 
 }
-
-getdefaultsinkname
+getdefaultsinkname | awk -F . '{print $NF}'
 #getdefaultsinkvol
 
