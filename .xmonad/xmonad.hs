@@ -358,7 +358,8 @@ myKeys =
         , ("M-/", spawn "dtos-help")                  -- DTOS help/tutorial videos
 
     -- KB_GROUP Run Prompt
-        , ("M-p", spawn "dmenu_run") -- Dmenu
+        , ("M-S-p", spawn "dmenu_run") -- Dmenu
+        , ("M-p", spawn "rofi -show drun") -- Rofi
 
     -- KB_GROUP Other Dmenu Prompts
     -- In Xmonad and many tiling window managers, M-p is the default keybinding to
