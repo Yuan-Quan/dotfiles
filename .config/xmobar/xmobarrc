@@ -28,7 +28,7 @@ Config { font            = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:h
                         -- Ram used number and percent
                     , Run Memory ["-t", "<fn=2>\xf233</fn>  mem: <used>M (<usedratio>%)"] 20
                         -- Disk space free
-                    , Run DiskU [("/", "<fn=2>\xf0c7</fn>  hdd: <free> free")] [] 60
+                    , Run DiskU [("/", "<fn=2>\xf0c7</fn>  ssd: <free> free")] [] 60
                         -- Echos an "wireless" icon in front of the wifi status output.
                     , Run Com "echo" ["<fn=2>\xf1eb</fn>"] "wifi" 3600
                         -- Get connected wifi ssid
