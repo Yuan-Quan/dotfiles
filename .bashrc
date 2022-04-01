@@ -24,10 +24,11 @@ export ROS_PYTHON_VERSION=3
 source /opt/ros/noetic/setup.bash
 
 # google cartographer
-source /home/cirno/local/cartographer_ws/devel_isolated/setup.bash
+#source /home/cirno/local/cartographer_ws/devel_isolated/setup.bash
 
 #source /home/cirno/source/repos/15th_car/devel/setup.bash
 
 # Fish as interactive shell
 exec &fish
 
+. "$HOME/.cargo/env"
