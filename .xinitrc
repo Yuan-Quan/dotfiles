@@ -16,6 +16,11 @@ xrandr --auto
 xrandr --output DisplayPort-1-0 --auto --below eDP-1-0
 xrandr --output HDMI-0 --auto --right-of eDP-1-0
 
+# init keyring
+eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh)
+# export keyring
+export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
+
 # start Window Manager
-exec xmonad
+exec dbus-launch xmonad
 
