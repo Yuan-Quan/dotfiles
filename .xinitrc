@@ -21,6 +21,12 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=gpg,pkcs11,secrets,ssh
 # export keyring
 export GNOME_KEYRING_CONTROL GNOME_KEYRING_PID GPG_AGENT_INFO SSH_AUTH_SOCK
 
+# or the icons in the dolphin won't display properly
+export XDG_CURRENT_DESKTOP=kde
+
+# disable power saving
+xset dpms off
+
 # start Window Manager
 exec dbus-launch xmonad
 
