@@ -45,7 +45,7 @@ if set -l ind (contains -i -- ./ $fish_user_paths)
     set -e fish_user_paths[$ind]
 end
 
-source /opt/ros/noetic/share/rosbash/rosfish
+# source /opt/ros/noetic/share/rosbash/rosfish
 
 alias uviz 'ROS_IP=192.168.50.101 ROS_MASTER_URI=http://192.168.50.10:11311/ rviz -d ~/ucar.rviz'
 
